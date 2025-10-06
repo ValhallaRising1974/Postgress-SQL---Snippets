@@ -1,0 +1,6 @@
+CREATE FUNCTION total_orders_by_client(cid INT)
+RETURNS INT AS $$
+BEGIN
+  RETURN (SELECT COUNT(*) FROM orders WHERE client_id = cid);
+END;
+$$ LANGUAGE plpgsql;
