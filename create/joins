@@ -1,0 +1,4 @@
+SELECT o.order_id, c.name, o.total
+FROM orders o
+JOIN clients c ON o.client_id = c.client_id
+WHERE o.total > 100;
